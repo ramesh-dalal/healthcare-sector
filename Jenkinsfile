@@ -14,7 +14,7 @@ pipeline {
         stage('SCM Checkout') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/ramesh-dalal/healthcare-sector.git'
+                  checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ramesh-dalal/healthcare-sector.git']])
                 //git 'https://github.com/ramesh-dalal/healthcare-sector.git'
             }
 		}
