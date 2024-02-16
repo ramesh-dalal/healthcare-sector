@@ -27,7 +27,7 @@ pipeline {
        stage("Docker build"){
             steps {
 				sh 'docker version'
-				sh "docker build -t rameshdalal/bankapp-eta-app:${BUILD_NUMBER} ."
+				sh "docker build -t rameshdalal/healthcare-app:${BUILD_NUMBER} ."
 				sh 'docker image list'
 				sh "docker tag rameshdalal/healthcare-app:${BUILD_NUMBER} rameshdalal/healthcare-app:latest"
             }
