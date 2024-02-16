@@ -1,0 +1,24 @@
+name: installing jenkins and java
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: executing script
+    script: script1.sh
+- name: installing docker and k8s
+  hosts: ks1
+  become: yes
+  tasks:
+  - name: executing script
+    script: script2.sh
+- name: installing docker and k8s
+  hosts: ks2
+  become: yes
+  tasks:
+  - name: executing script
+    script: script2.sh
+- name: installing docker, java and k8s
+  hosts: km
+  become: yes
+  tasks:
+  - name: executing script
+    script: script3.sh
